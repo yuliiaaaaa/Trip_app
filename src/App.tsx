@@ -123,6 +123,7 @@ export function App() {
               <ProductSlider
                 products={preparedWeatherData}
                 setSelectedTrip={setSelectedTrip}
+                selectedTrip={selectedTrip}
               />
             )}
             {preparedWeatherData.length > 0 ? (

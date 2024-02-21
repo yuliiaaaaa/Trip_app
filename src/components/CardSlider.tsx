@@ -6,11 +6,13 @@ import { Trip } from "../types/Trip";
 type Props = {
   products: Trip[];
   setSelectedTrip: (card: Trip) => void;
+  selectedTrip:Trip | null;
 };
 
 export const ProductSlider: React.FC<Props> = ({
   products,
   setSelectedTrip,
+  selectedTrip,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -71,7 +73,7 @@ export const ProductSlider: React.FC<Props> = ({
         ref={sliderRef}
       >
         {products.map((product: Trip) => (
-          <div className={cn("productSlide")} key={product.id}>
+          <div className={cn("productSlide",{'is-selected':product.id === selectedTrip?.id})} key={product.id}>
             <TripCard card={product} setSelectedTrip={setSelectedTrip} />
           </div>
         ))}

@@ -14,11 +14,7 @@ export const TripCard: React.FC<Props> = ({ card, setSelectedTrip }) => {
 
   return (
     <div className="trip-card" onClick={handleTripClick}>
-      <img
-        src={`img/${address}.jpg`}
-        alt="city"
-        className="trip-card__photo"
-      />
+      <img src={`img/${address}.jpg`} alt="city" className="trip-card__photo" />
       <div className="trip-card__info">
         <p className="trip-card__city">{address}</p>
         <p className="trip-card__date">{`${startDate} - ${lastDate}`}</p>
