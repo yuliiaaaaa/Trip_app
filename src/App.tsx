@@ -7,7 +7,7 @@ import { TripDetailsList } from "./components/TripDetailsList";
 import { Modal } from "./components/Modal";
 import { useLocalStorage } from "./helpers/UseLocalStorage";
 import { CurrentWeather } from "./components/CurrentWeather";
-import { getCurrentDateTime, getWeather } from "./helpers/WeatherMethods";
+import { calculateStartDay, getCurrentDateTime, getWeather } from "./helpers/WeatherMethods";
 import { CurrentWeatherData } from "./types/CurrentWeatherData";
 import { ForecastData } from "./types/ForeCastData";
 import initTrip from "./utils/trip.json";
@@ -38,11 +38,11 @@ export function App() {
         )
         .catch(() => setIsErrorCurrentWeather(true));
 
-      const startDay =
-        new Date(selectedTrip.startDate) < new Date(today) &&
-        new Date(today) <= new Date(selectedTrip.lastDate)
-          ? new Date(today).toISOString().split("T")[0]
-          : selectedTrip.startDate;
+      const startDay = calculateStartDay(
+        selectedTrip.startDate,
+        today,
+        selectedTrip.lastDate
+      );
 
       getWeather(selectedTrip.address, startDay, selectedTrip.lastDate)
         .then((value) => setWeatherData(value as ForecastData))
@@ -156,8 +156,7 @@ export function App() {
           <Modal onClose={handleCloseModal} setTrips={setTrips} trips={trips} />
         )}
       </div>
-      <div>
-      </div>
+      <div></div>
     </div>
   );
 }

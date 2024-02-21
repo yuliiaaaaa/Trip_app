@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import cn from "classnames";
 import cities from "../utils/cities.json";
@@ -17,11 +17,16 @@ export const Modal: React.FC<Props> = ({ onClose, setTrips, trips }) => {
   const [cityError, setCityError] = useState("");
   const [startDateError, setStartDateError] = useState("");
   const [endDateError, setEndDateError] = useState("");
+  const HOURS_IN_DAY = 24;
+  const MINUTES = 60;
+  const SECONDS = 60;
+  const MILLISECONDS = 1000;
 
   const MAX_DAYS_AHEAD = 15;
   const minDate = new Date().toISOString().split("T")[0];
   const maxDate = new Date(
-    new Date().getTime() + MAX_DAYS_AHEAD * 24 * 60 * 60 * 1000
+    new Date().getTime() +
+      MAX_DAYS_AHEAD * HOURS_IN_DAY * MINUTES * SECONDS * MILLISECONDS
   )
     .toISOString()
     .split("T")[0];
@@ -61,7 +66,7 @@ export const Modal: React.FC<Props> = ({ onClose, setTrips, trips }) => {
       setStartDateError("Start date must be after today");
       return;
     }
-  
+
     const newTrip = {
       id: uuidv4(),
       address: selectedCity,

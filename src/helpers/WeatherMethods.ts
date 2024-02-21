@@ -35,3 +35,19 @@ export const getCurrentDateTime = () => {
   const currentDateTime = `${currentDate}T${currentTime}`;
   return currentDateTime;
 };
+
+export function calculateStartDay(
+  selectedTripStartDate: string,
+  today: string,
+  selectedTripLastDate: string
+) {
+  const isTodayWithinTripDates =
+    new Date(selectedTripStartDate) < new Date(today) &&
+    new Date(today) <= new Date(selectedTripLastDate);
+
+  const startDay = isTodayWithinTripDates
+    ? new Date(today).toISOString().split("T")[0]
+    : selectedTripStartDate;
+
+  return startDay;
+}
