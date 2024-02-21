@@ -17,12 +17,12 @@ export const TripDetails: React.FC<Props> = ({ tripWeather }) => {
       <p className="trip-details__day">{dayOfWeek}</p>
       <div className="trip-details__temp">
         <img src={iconUrl} alt="weather-icon" className="trip-details__img" />
-        <p className="trip-details__temp-info">
+        <div className="trip-details__temp-info">
           {`${maxTemperature}`}
-          <p className="celsius celsius--small">&#8451;</p>
+          <span className="celsius celsius--small">&#8451;</span>
           <p>{`/${minTemperature}`}</p>
-          <p className="celsius celsius--small">&#8451;</p>
-        </p>
+          <span className="celsius celsius--small">&#8451;</span>
+        </div>
       </div>
     </div>
   );

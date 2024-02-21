@@ -14,7 +14,6 @@ import initTrip from "./utils/trip.json";
 import { Trip } from "./types/Trip";
 import { ErrorElement } from "./components/Error";
 import { NotFound } from "./components/NotFound";
-import { Login } from "./components/Login";
 
 export function App() {
   const initTrips: Trip[] = initTrip;
@@ -157,7 +156,6 @@ export function App() {
         )}
       </div>
       <div>
-        <Login />
       </div>
     </div>
   );
