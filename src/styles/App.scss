@@ -1,0 +1,64 @@
+.App {
+  &__trips {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 16px;
+  }
+  &__add-button {
+    margin-top: 53px;
+  }
+  &__right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &__left {
+    position: relative;
+  }
+  &__content {
+    padding-inline: 40px;
+  }
+  &__search-bar {
+    margin-bottom: 10px;
+  }
+  &__header {
+    margin-bottom: 20px;
+  }
+  &__sort-switcher{
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+}
+
+.toggle {
+  display: none;
+  &__label {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+  }
+}
+
+.is-active {
+  background-color: #2196f3;
+
+  &::before {
+    transform: translateX(20px);
+  }
+}

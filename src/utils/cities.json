@@ -1,0 +1,11 @@
+[
+  { "name": "London", "country": "UK", "imageUrl": "london.jpg" },
+  { "name": "Paris", "country": "France", "imageUrl": "paris.jpg" },
+  { "name": "Tokyo", "country": "Japan", "imageUrl": "tokyo.jpg" },
+  {
+    "name": "Cape Town",
+    "country": "South Africa",
+    "imageUrl": "capetown.jpg"
+  },
+  { "name": "Barcelona", "country": "Spain", "imageUrl": "barcelona.jpg" }
+]

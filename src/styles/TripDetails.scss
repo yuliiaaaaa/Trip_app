@@ -1,0 +1,15 @@
+.trip-details {
+  color: #89939a;
+  border: 1px solid $border-color;
+  &__img {
+    width: 80px;
+  }
+  &__temp-info {
+    justify-content: center;
+    display: flex;
+    font-size: 16px;
+  }
+  &__day {
+    text-align: center;
+  }
+}

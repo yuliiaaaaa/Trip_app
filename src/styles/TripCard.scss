@@ -1,0 +1,28 @@
+.trip-card {
+  width: 200px;
+  height: 300px;
+  border: 1px solid $border-color;
+  transition: all $transition-time-quickly ease-in;
+  
+  &__photo {
+    width: 200px;
+    height: 200px;
+  }
+  &__info {
+    padding-left: 20px;
+  }
+  &__city {
+    font-weight: 600;
+    font-size: 18px;
+    color: #313237;
+    margin-bottom: 20px;
+  }
+  &__date {
+    font-size: 14px;
+    line-height: 8px;
+    color: #89939a;
+  }
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}

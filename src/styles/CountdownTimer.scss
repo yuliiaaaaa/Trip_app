@@ -1,0 +1,18 @@
+.countdown {
+  width: 100%;
+}
+.timer {
+  display: flex;
+  gap: 40px;
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+  }
+  &__date {
+    text-align: center;
+  }
+  &__text {
+    text-transform: uppercase;
+  }
+}

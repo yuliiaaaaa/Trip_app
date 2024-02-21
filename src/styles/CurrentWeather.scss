@@ -1,0 +1,48 @@
+.current-weather {
+  width: 450px;
+  height: 100vh;
+  background-image: url(../../public/img/background-weather.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  color: white;
+  justify-content: center;
+  &__img {
+    width: 80px;
+    height: 80px;
+  }
+  &__temperature {
+    font-size: 62px;
+    font-weight: 500;
+  }
+  &__temperature-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__city {
+    text-align: center;
+    font-weight: 200;
+    font-size: 24px;
+    margin-bottom: 100px;
+  }
+  &__day {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+}
+.celsius{
+  vertical-align: top;
+  font-size: 24px;
+  font-weight: 400;
+  &--small{
+    font-size: 8px;
+  }
+}

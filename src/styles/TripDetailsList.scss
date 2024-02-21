@@ -1,0 +1,12 @@
+.trip-weather-list {
+  display: flex;
+  gap: 20px;
+  width: 800px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.trip-list{
+    &__title {
+    margin-bottom: 10px;
+  }
+}
