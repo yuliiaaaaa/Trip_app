@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Trip_app/static/css/main.43b0bd94.css",
-    "main.js": "/Trip_app/static/js/main.2ba94f36.js",
+    "main.css": "/Trip_app/static/css/main.b26bb8ba.css",
+    "main.js": "/Trip_app/static/js/main.88a47e7d.js",
     "static/media/background-weather.jpg": "/Trip_app/static/media/background-weather.00fe3a6e0e1310a16fac.jpg",
     "index.html": "/Trip_app/index.html",
-    "main.43b0bd94.css.map": "/Trip_app/static/css/main.43b0bd94.css.map",
-    "main.2ba94f36.js.map": "/Trip_app/static/js/main.2ba94f36.js.map"
+    "main.b26bb8ba.css.map": "/Trip_app/static/css/main.b26bb8ba.css.map",
+    "main.88a47e7d.js.map": "/Trip_app/static/js/main.88a47e7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.43b0bd94.css",
-    "static/js/main.2ba94f36.js"
+    "static/css/main.b26bb8ba.css",
+    "static/js/main.88a47e7d.js"
   ]
 }
