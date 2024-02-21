@@ -15,7 +15,7 @@ export const TripCard: React.FC<Props> = ({ card, setSelectedTrip }) => {
   return (
     <div className="trip-card" onClick={handleTripClick}>
       <img
-        src={`/img/${address}.jpg`}
+        src={`img/${address}.jpg`}
         alt="city"
         className="trip-card__photo"
       />
